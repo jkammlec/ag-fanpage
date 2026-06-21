@@ -11,3 +11,14 @@
     background-color: #002266;
     color: white;
 }
+.logo-nav {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 575px) {
+  .logo-nav {
+    max-width: 140px;
+  }
+}
