@@ -17,7 +17,6 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- NAVBAR CORREGIDO: Igual al resto de tus páginas para evitar que se apile en celulares -->
   <nav class="navbar navbar-expand-lg bg-custom text-white">
     <div class="container-fluid d-flex justify-content-center">
       <div class="d-flex align-items-center gap-4">
@@ -39,22 +38,17 @@
     <div class="container my-4">
       <div class="mx-auto" style="max-width: 75%;">
         
-        <!-- TARJETA PRINCIPAL CORREGIDA: Crece de arriba hacia abajo de forma segura -->
-        <div class="card mb-3 border-0 text-white">
-          <div class="position-relative">
+<!-- TARJETA PRINCIPAL RESPONSIVA -->
+        <div class="card mb-3 border-0 bg-dark text-white overflow-hidden">
+          <div class="position-relative d-flex flex-column d-md-block">
             <img src="img/AGCallingPlane.jpg" class="card-img" alt="...">
-            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-            
-            <!-- El contenedor ahora mide el 100% de la altura de la tarjeta y se alinea con Flexbox -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 d-none d-md-block"></div>
             <div id="contenedor-texto"
-              class="position-absolute top-0 start-50 translate-middle-x text-center px-3 w-100 h-100 d-flex flex-column justify-content-center align-items-center lh-sm">
-
+              class="position-relative position-md-absolute top-md-0 start-50 translate-middle-x-md text-center px-3 py-3 py-md-0 w-100 h-md-100 d-flex flex-column justify-content-center align-items-center lh-sm bg-dark bg-md-transparent">
               <p class="card-text fs-6 fs-sm-4 fw-bold m-0">
                 Atarashi Gakko, el grupo japonés que viene a refrescar tus oídos. <br class="d-none d-sm-inline">
                 Chile lo sabe, por eso es el segundo país que más las escucha.
               </p>
-              
-              <!-- Tu archivo JavaScript (js/index.js) inyectará aquí el botón y el texto adicional sin romper el diseño -->
             </div>
 
           </div>
