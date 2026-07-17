@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
   <link rel="stylesheet" href="style/style.css">
   <title>Atarashi Gakko Fanpage</title>
 </head>
@@ -17,97 +18,109 @@
 <body class="d-flex flex-column min-vh-100">
 
   <nav class="navbar navbar-expand-lg bg-custom text-white">
-    <div class="container-fluid d-flex justify-content-center">
+    <div class="container-fluid">
 
-      <div class="d-flex align-items-center gap-4">
-        <!-- izq-->
+      <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 w-100">
+
+        <!-- Música -->
         <a class="nav-link fw-bold" href="musica.html">Música</a>
-        <!-- centro -->
-        <a class="navbar-brand" href="index.html">
+
+        <!-- Logo -->
+        <a class="navbar-brand m-0 logo-nav " href="index.html">
           <img src="img/ag-logo.png" alt="Atarashi Gakko" class="logo-nav">
         </a>
-        <!-- der -->
+
+        <!-- Contacto -->
         <a class="nav-link fw-bold" href="contacto.html">Contacto</a>
+
       </div>
+
     </div>
   </nav>
 
-  <div class="container my-4">
-    <div class="mx-auto" style="max-width: 75%;">
-      <div class="card mb-3 border-0 text-white">
-        <div class="position-relative">
-          <img src="img/AGCallingPlane.jpg" class="card-img" alt="...">
-          <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-          <div class="position-absolute bottom-0 start-50 translate-middle-x text-center px-4 pb-4">
-            <p class="card-text fs-4 fw-bold">
-              Atarashi Gakko, el grupo japonés que viene a refrescar tus oídos. <br>
-              Chile lo sabe, por eso es el segundo país que más las escucha.
-            </p>
+  <!-- Añadimos el <main> para empujar el footer al fondo de la pantalla igual que en contacto -->
+  <main class="flex-grow-1">
+    <div class="container my-4">
+      <div class="mx-auto" style="max-width: 75%;">
+        
+        <div class="card mb-3 border-0 text-white">
+          <div class="position-relative">
+            <img src="img/AGCallingPlane.jpg" class="card-img" alt="...">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+            <div id="contenedor-texto"
+              class="position-absolute bottom-0 start-50 translate-middle-x text-center px-4 pb-4 w-100">
+              <p class="card-text fs-4 fw-bold mb-2">
+                Atarashi Gakko, el grupo japonés que viene a refrescar tus oídos. <br>
+                Chile lo sabe, por eso es el segundo país que más las escucha.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- CARDS INFERIORES -->
-      <div class="row g-3">
-        <div class="col-md-6 d-flex">
-          <div class="card mb-3 h-100 w-100">
-            <div class="row g-0 h-100">
-              <div class="col-md-4">
-                <img src="img/spot.png" class="img-fluid h-100 object-fit-cover" alt="...">
+        </div> <!-- ¡CORRECCIÓN! Cerramos la card del banner aquí para que no "trague" el resto del diseño -->
+
+        <!-- CARDS INFERIORES -->
+        <div class="row g-3">
+          <div class="col-md-6 d-flex">
+            <div class="card mb-3 h-100 w-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-4">
+                  <img src="img/spot.png" class="img-fluid h-100 object-fit-cover" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Spotify</h5>
+                    <p class="card-text">En Spotify, Chile es el top 2 de oyentes.</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Spotify</h5>
-                  <p class="card-text">En Spotify, Chile es el top 2 de oyentes.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex">
+            <div class="card mb-3 h-100 w-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-4">
+                  <img src="img/yt.png" class="img-fluid h-100 object-fit-cover" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">YouTube</h5>
+                    <p class="card-text">
+                      En YouTube, donde superan los 5 millones de vistas, Chile es el top 6 de oyentes.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 d-flex">
-          <div class="card mb-3 h-100 w-100">
-            <div class="row g-0 h-100">
-              <div class="col-md-4">
-                <img src="img/yt.png" class="img-fluid h-100 object-fit-cover" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">YouTube</h5>
-                  <p class="card-text">
-                    En YouTube, donde superan los 5 millones de vistas, Chile es el top 6 de oyentes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div> <!-- ¡CORRECCIÓN! Cerramos el primer contenedor my-4 aquí -->
+    </div>
+
+    <div class="container my-4 text-center">
+      <h4 class="mb-3">Canción más escuchada <i class="bi bi-caret-right-square-fill ms-2 fs-5"></i></h4>
+
+      <div class="mx-auto" style="max-width: 700px;">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/l446hUqQ7GY" title="YouTube video player" allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container my-4 text-center">
-    <h4 class="mb-3">Canción más escuchada <i class="bi bi-caret-right-square-fill ms-2 fs-5"></i></h4>
-
-    <div class="mx-auto" style="max-width: 700px;">
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/l446hUqQ7GY" title="YouTube video player" allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
+  </main> <!-- ¡CORRECCIÓN! Cerramos el bloque main principal -->
 
   <footer class="bg-custom text-white py-4">
-    <div class="container-fluid d-flex justify-content-center">
-      <div class="d-flex flex-column flex-lg-row align-items-center gap-3 text-center">
-        <p class="fw-bold m-0">
-          De una fan para otr@s fans
-        </p>
+      <div class="container-fluid d-flex justify-content-center">
+          <div class="d-flex flex-column flex-lg-row align-items-center gap-3 text-center">
+              <p class="fw-bold m-0">
+                  De una fan para otr@s fans
+              </p>
+          </div>
       </div>
-    </div>
-    <div class="text-center mt-3 small">
-      © 2026 Atarashi Gakko
-    </div>
+      <div class="text-center mt-3 small">
+          © 2026 Atarashi Gakko
+      </div>
   </footer>
-
 </body>
 
 </html>

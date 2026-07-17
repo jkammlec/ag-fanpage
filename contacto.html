@@ -19,13 +19,10 @@
     <div class="container-fluid d-flex justify-content-center">
 
       <div class="d-flex align-items-center gap-4">
-        <!-- izq-->
         <a class="nav-link fw-bold" href="musica.html">Música</a>
-        <!-- centro -->
         <a class="navbar-brand" href="index.html">
           <img src="img/ag-logo.png" alt="Atarashi Gakko" class="logo-nav">
         </a>
-        <!-- der -->
         <a class="nav-link fw-bold" href="contacto.html">Contacto</a>
       </div>
     </div>
@@ -44,42 +41,45 @@
                         <p class="text-center text-muted mb-4">
                             Envíanos tus ideas o sugerencias como fan de AG!
                         </p>
-                        <form>
+                        
+                        <form id="formularioContacto" novalidate>
 
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Tu nombre" required>
+                                <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" placeholder="correo@email.com" required>
+                                <input type="email" id="correo" class="form-control" placeholder="correo@email.com" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Género</label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" id="m">
+                                    <input class="form-check-input" type="radio" name="genero" id="m" value="Masculino">
                                     <label class="form-check-label" for="m">Masculino</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" id="f">
+                                    <input class="form-check-input" type="radio" name="genero" id="f" value="Femenino">
                                     <label class="form-check-label" for="f">Femenino</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="genero" id="n">
+                                    <input class="form-check-input" type="radio" name="genero" id="n" value="Prefiero no decirlo">
                                     <label class="form-check-label" for="n">Prefiero no decirlo</label>
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Deja tu mensaje acá</label>
-                                <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje..."
+                                <textarea id="mensaje" class="form-control" rows="4" placeholder="Escribe tu mensaje..."
                                     required></textarea>
                             </div>
+
+                            <div id="contenedorAlerta" class="mb-3"></div>
 
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-custom">
@@ -106,6 +106,7 @@
         </div>
     </footer>
 
+    <script src="js/validaciones.js"></script>
 </body>
 
 </html>
