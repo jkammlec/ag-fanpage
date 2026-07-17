@@ -2,33 +2,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-texto");
 
   if (contenedor) {
-    // Contenedor para el texto oculto
+    // 1. Creamos el contenedor para el texto que se revelará
     const textoMas = document.createElement("p");
     textoMas.id = "texto-adicional";
-    // Clases de Bootstrap
-    textoMas.className = "card-text small mt-2 d-none transition-fade"; 
-    textoMas.innerHTML = `Atarashii Gakkō no Leaders adopta una filosofía de desafiar las normas de la sociedad japonesa. Posicionándose como las representantes de la juventud japonesa, el principio fundamental del grupo afirma: «En una época en la que solamente se reconoce a los ciudadanos ejemplares, nos esforzamos por desafiar a una sociedad de mente estrecha abrazando la individualidad y la libertad».`;
+    // Usamos fs-7 (o una fuente muy pequeña) en móviles para que quepa bien dentro de la foto
+    textoMas.className = "card-text mt-2 d-none fw-normal text-light"; 
+    textoMas.style.fontSize = "0.85rem"; // Forzamos un tamaño de letra seguro para celular
+    textoMas.style.maxWidth = "550px";
+    textoMas.innerHTML = `Atarashii Gakkō no Leaders adopta una filosofía de desafíar las normas de la sociedad japonesa. Posicionandose como las representantes de la juventud japonesa, el principio fundamental del grupo afirma: «En una época en la que solamente se reconoce a los ciudadanos ejemplares, nos esforzamos por desafiar a una sociedad de mente estrecha abrazando la individualidad y la libertad».`;
 
-    // Botón "Leer más"
+    // 2. Creamos el botón "Leer más"
     const botonLeerMas = document.createElement("button");
     botonLeerMas.id = "btn-leer-mas";
-    // Clases de Bootstrap para botón
-    botonLeerMas.className = "btn btn-sm btn-outline-light mt-2";
+    botonLeerMas.className = "btn btn-sm btn-outline-light mt-2 px-3 py-1";
     botonLeerMas.innerText = "Leer más";
 
-    // Añadir a contenedor del HTML
-    contenedor.appendChild(textoMas);
+    // 3. Los inyectamos en el contenedor (primero el botón, luego el texto)
     contenedor.appendChild(botonLeerMas);
+    contenedor.appendChild(textoMas);
 
-    // Event listener
+    // 4. Añadimos el evento click para alternar la visibilidad
     botonLeerMas.addEventListener("click", () => {
-      // Si el texto está oculto (contiene d-none)
       if (textoMas.classList.contains("d-none")) {
-        textoMas.classList.remove("d-none"); // Se muestra
-        botonLeerMas.innerText = "Leer menos"; // Cambia el texto del botón
+        textoMas.classList.remove("d-none");
+        botonLeerMas.innerText = "Leer menos";
       } else {
-        textoMas.classList.add("d-none"); // Se oculta
-        botonLeerMas.innerText = "Leer más"; // Reestablece el botón
+        textoMas.classList.add("d-none");
+        botonLeerMas.innerText = "Leer más";
       }
     });
   }
