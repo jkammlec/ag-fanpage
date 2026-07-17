@@ -27,13 +27,16 @@
   .position-md-absolute {
     position: absolute !important;
   }
+  .bottom-md-0 {
+    bottom: 0 !important;
+  }
+  .start-md-50 {
+    left: 50% !important;
+  }
   .translate-middle-x-md {
     transform: translateX(-50%) !important;
   }
   .bg-md-transparent {
     background-color: transparent !important;
-  }
-  .h-md-100 {
-    height: 100% !important;
   }
 }
